@@ -1,4 +1,7 @@
 export PS1="\e[0;34m[\u@\h \W]\$ \e[m "
+# Setting vs code as default?
+export EDITOR="code -w"
+
 
 # Setting PATH for Python 3.9
 # The original version is saved in .bash_profile.pysave
