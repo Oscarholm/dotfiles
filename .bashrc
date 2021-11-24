@@ -3,9 +3,14 @@
 PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 alias node="env NODE_NO_READLINE=1 rlwrap node"
 
+
+
 ## -----------------------
 ## -- 2) Set up aliases --
 ## -----------------------
+
+# 2.0 get the right version of vim (only problem in tmux)
+alias vim="/opt/homebrew/bin/vim"
 
 # 2.1) Safety
 alias rm="rm -i"
