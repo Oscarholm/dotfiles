@@ -1,8 +1,6 @@
 # Make prompt informative
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
-alias node="env NODE_NO_READLINE=1 rlwrap node"
-
 
 
 ## -----------------------
@@ -10,7 +8,11 @@ alias node="env NODE_NO_READLINE=1 rlwrap node"
 ## -----------------------
 
 # 2.0 get the right version of vim (only problem in tmux)
-alias vim="/opt/homebrew/bin/vim"
+# alias vim="/opt/homebrew/bin/vim" disabled since only needed in macOS
+# or we can also add to PATH
+#PATH="/opt/homebrew/bin/vim:${PATH}"
+#export PATH
+# going to create if logic so that linux/macOS can be setup with same file.
 
 # 2.1) Safety
 alias rm="rm -i"
@@ -44,3 +46,10 @@ export GREP_COLOR='1;31' # green for matches
 # http://www.gnu.org/software/coreutils/faq/coreutils-faq.html#Sort-does-not-sort-in-normal-order_0021
 unset LANG
 export LC_ALL=POSIX
+
+# Moved from bash_profile
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
